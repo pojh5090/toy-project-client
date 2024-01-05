@@ -26,6 +26,6 @@ export default function ProductList(param: { category: string[] }) {
     return (<>
         <ProductFilter searchParam={searchParam} category={currentCategory}/>
         {productList.length > 0 &&
-            productList.map(product => (<div>{product.name}</div>))}
+            productList.map(product => (<div key={product.id}>{product.name}</div>))}
     </>)
 }
