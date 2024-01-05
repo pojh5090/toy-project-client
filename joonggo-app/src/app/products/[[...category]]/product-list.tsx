@@ -7,7 +7,7 @@ import {Product, search, SearchParam} from "@/app/products/[[...category]]/produ
 
 export default function ProductList(param: { category: string[] }) {
     const {category} = param;
-    const currentCategoryIndex = category.toString();
+    const currentCategory = !category ? "" : category.toString();
 
     const queryParam = useSearchParams();
     const searchValue = (queryParam.get("searchValue") as string) || "";
@@ -24,7 +24,7 @@ export default function ProductList(param: { category: string[] }) {
 
 
     return (<>
-        <ProductFilter searchParam={searchParam} category={currentCategoryIndex}/>
+        <ProductFilter searchParam={searchParam} category={currentCategory}/>
         {productList.length > 0 &&
             productList.map(product => (<div>{product.name}</div>))}
     </>)
