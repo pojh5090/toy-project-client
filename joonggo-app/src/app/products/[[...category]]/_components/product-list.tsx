@@ -1,9 +1,11 @@
 "use client";
 
 import {useSearchParams} from "next/navigation";
-import ProductFilter from "@/app/products/[[...category]]/product-filter";
+import ProductFilter from "@/app/products/[[...category]]/_components/product-filter";
 import {useEffect, useState} from "react";
-import {Product, search, SearchParam} from "@/app/products/[[...category]]/product";
+import {Product} from "@/app/products/[[...category]]/types/Product";
+import {SearchParam} from "@/app/products/[[...category]]/types/SearchParam";
+import {search} from "@/app/products/[[...category]]/actions/products";
 
 export default function ProductList(param: { category: string[] }) {
     const {category} = param;

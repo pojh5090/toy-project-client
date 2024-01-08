@@ -1,16 +1,5 @@
-export class SearchParam {
-    searchValue: string;
-
-    constructor(searchValue: string) {
-        this.searchValue = searchValue;
-    }
-}
-
-export interface Product {
-    id: string,
-    name: string,
-    price: number
-}
+import {SearchParam} from "@/app/products/[[...category]]/types/SearchParam";
+import {Product} from "@/app/products/[[...category]]/types/Product";
 
 export function search(searchParam: SearchParam | null): Product[] {
     // TODO search & filter API
