@@ -3,9 +3,9 @@
 import {useSearchParams} from "next/navigation";
 import ProductFilter from "@/app/products/[[...category]]/_components/product-filter";
 import {useEffect, useState} from "react";
-import {Product} from "@/app/products/[[...category]]/types/Product";
-import {SearchParam} from "@/app/products/[[...category]]/types/SearchParam";
-import {search} from "@/app/products/[[...category]]/actions/products";
+import {Product} from "@/app/types/Product";
+import {SearchParam} from "@/app/types/SearchParam";
+import {search} from "@/app/actions/products";
 
 export default function ProductList(param: { category: string[] }) {
     const {category} = param;
