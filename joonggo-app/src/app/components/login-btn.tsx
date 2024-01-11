@@ -1,5 +1,5 @@
-"use client"; // 추가
-import { signIn } from "next-auth/react";
+"use client";
+// import { signIn } from "next-auth/react";
 
 const Login: React.FC = () => {
   const handleSignIn = async (e: React.MouseEvent<HTMLButtonElement>) => {
