@@ -1,4 +1,4 @@
-import {SearchParam} from "@/app/products/[[...category]]/types/SearchParam";
+import {SearchParam} from "@/app/types/SearchParam";
 
 export default function ProductFilter(param: { searchParam: SearchParam, category: string }) {
     return (
