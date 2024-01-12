@@ -1,6 +1,6 @@
-import {SearchParam} from "@/app/types/SearchParam";
-import {Product} from "@/app/types/Product";
-import {Category} from "@/app/types/Category";
+import {SearchParam} from "@/types/SearchParam";
+import {Product} from "@/types/Product";
+import {Category} from "@/types/Category";
 
 export function search(searchParam: SearchParam | null): Product[] {
     // TODO search & filter API

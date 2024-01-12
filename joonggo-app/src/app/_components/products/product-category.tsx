@@ -1,7 +1,6 @@
-import {Category} from "@/app/types/Category";
 import React from "react";
-import HierarchyCategory from "@/app/components/hierarchy-category";
-import {getCategory} from "@/app/actions/products";
+import HierarchyCategory from "@/app/_components/products/hierarchy-category";
+import {getCategory} from "@/scripts/products";
 
 export default function ProductCategory() {
     const categories = getCategory();

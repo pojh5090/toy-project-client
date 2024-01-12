@@ -1,7 +1,7 @@
-import CategoryLevel from "@/app/products/[[...category]]/_components/category-level";
-import ProductList from "@/app/products/[[...category]]/_components/product-list";
-import {getCategory} from "@/app/actions/products";
-import {Category} from "@/app/types/Category";
+import CategoryLevel from "@/app/_components/products/category-level";
+import ProductList from "@/app/_components/products/product-list";
+import {getCategory} from "@/scripts/products";
+import {Category} from "@/types/Category";
 
 export const dynamicParams = false; // Dynamic segments not included in generateStaticParams will return a 404.
 

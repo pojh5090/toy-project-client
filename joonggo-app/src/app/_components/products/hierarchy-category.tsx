@@ -1,4 +1,4 @@
-import {Category} from "@/app/types/Category";
+import {Category} from "@/types/Category";
 import Link from "next/link";
 import React from "react";
 
