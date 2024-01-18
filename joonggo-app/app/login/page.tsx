@@ -1,5 +1,5 @@
-import LoginBtn from "../components/login-btn";
-import LoginInput from "../components/login-btn";
+import LoginBtn from "../_components/login/login-btn";
+import LoginInput from "../_components/login/login-btn";
 import Image from "next/image";
 
 const LoginPage: React.FC = () => {
