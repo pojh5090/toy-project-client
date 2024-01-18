@@ -1,10 +1,12 @@
 "use client";
 
 import React, { FormEvent, ChangeEvent, useRef } from "react";
-import useStore from "../store";
+import { useStore } from "../store";
+import { PersonalQuestion } from "../../_types/PersonalQuestion";
 
 export default function Page() {
   const { formData, setFormData } = useStore();
+
   const inputRefs = {
     userId: useRef<HTMLInputElement>(null),
     title: useRef<HTMLInputElement>(null),
@@ -13,6 +15,21 @@ export default function Page() {
 
   const onSubmit = (event: FormEvent) => {
     event.preventDefault();
+
+    // formData를 직접 변경하고 setFormData에 전달
+    const updatedFormData = {
+      userId: inputRefs.userId.current?.value || "",
+      title: inputRefs.title.current?.value || "",
+      contents: inputRefs.contents.current?.value || "",
+      questionNumber: 0,
+      writeDate: new Date(),
+    };
+
+    console.log(updatedFormData);
+
+    // 기존 배열에 새로운 객체 추가
+    setFormData(updatedFormData);
+
     console.log(formData);
 
     // 입력 필드 초기화
@@ -23,10 +40,7 @@ export default function Page() {
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData({ [name]: value });
-  };
+  ) => {};
 
   return (
     <div
